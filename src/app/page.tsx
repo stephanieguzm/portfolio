@@ -6,12 +6,11 @@ import { Connect } from '@/components/connect/page'
 
 export default function Home() {
   return (
-    <div>
-      Home
+    <main>
       <About />
       <Skills />
       <Projects />
       <Connect />
-    </div>
+    </main>
   )
 }
