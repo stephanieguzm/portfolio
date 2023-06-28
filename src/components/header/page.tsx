@@ -21,7 +21,7 @@ const Header = () => {
       <p>{SITE_NAME}</p>
       <div>
         {navLinks.map( (link, index) => 
-          <Link key={index} href={`/${link.path}`}>{link.name}</Link>
+          <Link key={index} className={`nav-link`} href={`#${link.path}`}>{link.name}</Link>
         )}
       </div>
     </header>
