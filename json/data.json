@@ -3,7 +3,11 @@
     "id": "seekr",
     "name": "Seekr",
     "headline": "Job search web application where users search for, view, and apply to software engineering openings",
-    "images": ["https://bookmarked-fe.netlify.app/"],
+    "images": [
+      "/images/projects/seekr-home-desktop.png", 
+      "/images/projects/seekr-results-desktop.png", 
+      "/images/projects/seekr-single-result-desktop.png" 
+    ],
     "techStackLabels": ["React", "React Router", "CSS", "GraphQL", "Apollo Client"],
     "repoURL": ["https://github.com/stephanieguzm/seekr-ui"],
     "liveURL": "https://seekr-wine.vercel.app/",
@@ -16,7 +20,13 @@
     "id": "te-cuento",
     "name": "Té Cuento",
     "headline": "Virtual tea community web application where users learn about and share insights on a selection of tea",
-    "images": ["https://bookmarked-fe.netlify.app/"],
+    "images": [
+      "/images/projects/tecuento-home-desktop.png", 
+      "/images/projects/tecuento-teas-desktop.png", 
+      "/images/projects/tecuento-single-tea-desktop.png", 
+      "/images/projects/tecuento-comment-desktop.png", 
+      "/images/projects/tecuento-single-tea-mobile.png"
+    ],
     "techStackLabels": ["React", "React Router", "Cypress", "Node", "Express", "PostgreSQL", "Knex", "CSS"],
     "repoURL": ["https://github.com/stephanieguzm/te-cuento-ui", "https://github.com/stephanieguzm/te-cuento-api"],
     "liveURL": "https://te-cuento-ui.vercel.app/",
@@ -29,7 +39,13 @@
     "id": "bookmarked",
     "name": "Bookmarked",
     "headline": "Book-swapping web application where users add and lend out their personal library and browse books in circulation",
-    "images": ["https://bookmarked-fe.netlify.app/"],
+    "images": [
+      "/images/projects/bookmarked-home-desktop.png", 
+      "/images/projects/bookmarked-manage-desktop.png", 
+      "/images/projects/bookmarked-browse-desktop.png", 
+      "/images/projects/bookmarked-add-desktop.png", 
+      "/images/projects/bookmarked-home-mobile.png"
+    ],
     "techStackLabels": ["React", "React Router", "GraphQL", "Apollo Client", "Cypress", "CircleCI", "CSS"],
     "repoURL": ["https://github.com/The-Readers-Collective/bookmarked-ui"],
     "liveURL": "https://bookmarked-fe.netlify.app/",
