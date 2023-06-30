@@ -2,7 +2,7 @@
 
 export const Connect = () => {
   return (
-    <section>
+    <section id={"connect"}>
       <p>Connect</p>
     </section>
   )

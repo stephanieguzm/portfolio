@@ -5,7 +5,7 @@ const YEAR : number = DATE.getUTCFullYear()
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id={"footer"} >
       <div>
         <p>&#169; {YEAR} {COPYRIGHT}. All rights reserved.</p>
         <div>
