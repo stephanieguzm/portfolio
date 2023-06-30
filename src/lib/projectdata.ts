@@ -8,9 +8,9 @@ export async function getAllProjects() : Promise<ProjectInterface[]> {
   // Read the json file
   const jsonData : Buffer = await fsPromises.readFile(filePath);
   // Parse data as json
-  const projectsData = JSON.parse(jsonData.toString());
+  const projectsData : ProjectInterface[] = JSON.parse(jsonData.toString());
 
-  return projectsData as ProjectInterface[]
+  return projectsData
 }
 
 export async function getSingleProject({ params }: { params: { id: string } }) : Promise<ProjectInterface> {
