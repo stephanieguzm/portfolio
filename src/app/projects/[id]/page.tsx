@@ -1,22 +1,23 @@
+import Image from "next/image"
 import { getAllProjects, getSingleProject } from "@/lib/projectdata"
-
-export const dynamicParams = false
 export interface ProjectPageProps {
   id: string
 }
 export interface ProjectInterface {
-    id: string
-    name: string
-    headline: string
-    images: string[]
-    techStackLabels: string[]
-    repoURL: string[]
-    liveURL: string
-    purpose?: string
-    techStackExp?: string
-    problems?: string
-    lessons?: string
+  id: string
+  name: string
+  headline: string
+  images: string[]
+  techStackLabels: string[]
+  repoURL: string[]
+  liveURL: string
+  purpose?: string
+  techStackExp?: string
+  problems?: string
+  lessons?: string
 }
+
+export const dynamicParams = false
 
 export const generateStaticParams = async () => {
   const projects : ProjectInterface[] = await getAllProjects()
@@ -43,6 +44,13 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
         }
           <a href={project.liveURL} target='_blank' rel='noreferrer'>Live Site</a>
       </div>
+      <Image 
+        src={project.images[0]}
+        alt={`${project.name} homepage`}
+        width={500}
+        height={500}
+        priority
+      />
     </section>
   )
 }

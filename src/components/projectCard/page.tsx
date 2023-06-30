@@ -13,10 +13,17 @@ export const ProjectCard = ({ id, name, headline, techStackLabels, image } : Pro
   return (
     <div className={id}>
       <div>
-        {/* <Image
-          src={}
-          alt={}
-        ></Image> */}
+        <Image
+          src={image}
+          alt={`${name} project homepage`}
+          width={500}
+          height={500}
+          // style={{
+          //   width: 100%,
+          //   height: auto,
+          // }}
+          priority
+        />
         </div>
       <h2>{name}</h2>
       <h3>{headline}</h3>
