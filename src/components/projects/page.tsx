@@ -1,13 +1,16 @@
 import { ProjectCard } from "../projectCard/page"
-import { PROFILE_PROJECTS_TITLE, PROFILE_PROJECTS_SUBTITLE, PROJECTS_DATA } from "@/lib/constants"
+import { PROFILE_PROJECTS_TITLE, PROFILE_PROJECTS_SUBTITLE } from "@/lib/constants"
+import { getAllProjects } from "@/lib/projectdata"
 
-export const Projects = () => {
+export const Projects = async () => {
+  const projectsData = await getAllProjects()
+
   return (
-    <section>
+    <section id={"projects"} >
       <h2>{PROFILE_PROJECTS_TITLE}</h2>
       <h3>{PROFILE_PROJECTS_SUBTITLE}</h3>
       <div>
-        {PROJECTS_DATA.map( (project, index) => {
+        {projectsData.map( (project, index) => {
           return <ProjectCard 
             id={project.id}
             name={project.name}
