@@ -9,7 +9,12 @@
       "/images/projects/seekr-single-result-desktop.png" 
     ],
     "techStackLabels": ["React", "React Router", "CSS", "GraphQL", "Apollo Client"],
-    "repoURL": ["https://github.com/stephanieguzm/seekr-ui"],
+    "repoURL": [
+      {
+        "text": "Source Code",
+        "link": "https://github.com/stephanieguzm/seekr-ui"
+      }
+    ],
     "liveURL": "https://seekr-wine.vercel.app/",
     "purpose": "",
     "techStackExp": "",
@@ -28,7 +33,14 @@
       "/images/projects/tecuento-single-tea-mobile.png"
     ],
     "techStackLabels": ["React", "React Router", "Cypress", "Node", "Express", "PostgreSQL", "Knex", "CSS"],
-    "repoURL": ["https://github.com/stephanieguzm/te-cuento-ui", "https://github.com/stephanieguzm/te-cuento-api"],
+    "repoURL": [
+      {
+        "text": "Front End Code",
+        "link": "https://github.com/stephanieguzm/te-cuento-ui"
+      },
+      {"text": "API Code",
+        "link": "https://github.com/stephanieguzm/te-cuento-api"}
+    ],
     "liveURL": "https://te-cuento-ui.vercel.app/",
     "purpose": "",
     "techStackExp": "",
@@ -47,7 +59,12 @@
       "/images/projects/bookmarked-home-mobile.png"
     ],
     "techStackLabels": ["React", "React Router", "GraphQL", "Apollo Client", "Cypress", "CircleCI", "CSS"],
-    "repoURL": ["https://github.com/The-Readers-Collective/bookmarked-ui"],
+    "repoURL": [
+      {
+        "text": "Source Code",
+        "link": "https://github.com/The-Readers-Collective/bookmarked-ui"
+      }
+    ],
     "liveURL": "https://bookmarked-fe.netlify.app/",
     "purpose": "",
     "techStackExp": "",
