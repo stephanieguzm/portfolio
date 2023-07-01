@@ -1,4 +1,4 @@
-import { PROFILE_ABOUT_TITLE, PROFILE_ABOUT_TEXT } from "@/lib/constants"
+import { PROFILE_ABOUT_TITLE, PROFILE_ABOUT_TEXT } from "@lib/constants"
 
 export const About = () => {
   return (

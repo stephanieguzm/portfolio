@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { getAllProjects, getSingleProject } from "@/lib/projectdata"
+import { getAllProjects, getSingleProject } from "@lib/projectdata"
 export interface ProjectPageProps {
   id: string
 }

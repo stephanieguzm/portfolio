@@ -1,4 +1,4 @@
-import { PROFILE_SKILLS_TITLE, PROFILE_SKILLS_LABELS } from "@/lib/constants"
+import { PROFILE_SKILLS_TITLE, PROFILE_SKILLS_LABELS } from "@lib/constants"
 
 export const Skills = () => {
   return (

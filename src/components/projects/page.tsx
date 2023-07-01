@@ -1,6 +1,6 @@
 import { ProjectCard } from "../projectCard/page"
-import { PROFILE_PROJECTS_TITLE, PROFILE_PROJECTS_SUBTITLE } from "@/lib/constants"
-import { getAllProjects } from "@/lib/projectdata"
+import { PROFILE_PROJECTS_TITLE, PROFILE_PROJECTS_SUBTITLE } from "@lib/constants"
+import { getAllProjects } from "@lib/projectdata"
 
 export const Projects = async () => {
   const projectsData = await getAllProjects()
