@@ -1,8 +1,43 @@
 "use client"
 
+import { FormEvent, useRef, useState, ChangeEvent } from "react"
+
 const Form = () => {
+  const [ formData, setFormData ] = useState({
+    name: "",
+    email: "",
+    message: ""
+  })
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    let value: typeof formData[keyof typeof formData] = event.target.value
+
+    setFormData({...formData, [event.target.id]: value})
+  }
+
+  function handleSubmit (event : FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    if (!formData.name || !formData.email || !formData.message) {
+      return <h4 className={"form-message"}>Failed to send. Please fill out all form inputs to send your message.</h4>
+    }
+
+    //do something with the data
+    console.log((formData))
+
+    clearForm()
+  }
+
+  const clearForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      message: ""
+    })
+  }
+
   return(
-    <form onSubmit={() => console.log("I'm in!")} className={""}>
+    <form onSubmit={handleSubmit} className={""}>
       <div className={"form-inner"}>
         <label htmlFor={"name"} className={""}>
           Name
@@ -11,16 +46,26 @@ const Form = () => {
           id={"name"}
           type={"text"} 
           name={"name"} 
-          className={""} />
+          className={""}
+          value={formData.name}
+          onChange={handleChange}
+          minLength={2}
+          maxLength={40}
+          required />
         <div>
           <label htmlFor={"email"} className={""}>
             Email
           </label>
           <input 
+            id={"email"}
             type={"email"} 
             name={"email"} 
-            className={""} 
-            placeholder={"Email"}/>
+            className={""}
+            value={formData.email}
+            onChange={handleChange}
+            minLength={3}
+            maxLength={30}
+            required />
         </div>
         <div>
           <label htmlFor={"message"} className={""}>
@@ -29,7 +74,12 @@ const Form = () => {
           <textarea 
             id={"message"}
             name={"message"}
-            className={""}/>
+            className={""}
+            value={formData.message}
+            onChange={handleChange}
+            minLength={5}
+            maxLength={750}
+            required />
         </div>
           <button 
             type={"submit"}
