@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { getAllProjects, getSingleProject } from "@lib/projectdata"
+import { notFound } from "next/navigation";
 export interface ProjectPageProps {
   id: string
 }
@@ -17,8 +18,6 @@ export interface ProjectInterface {
   lessons?: string
 }
 
-export const dynamicParams = false
-
 export const generateStaticParams = async () => {
   const projects : ProjectInterface[] = await getAllProjects()
 
@@ -30,6 +29,10 @@ export const generateStaticParams = async () => {
 const ProjectPage = async ({ params }: { params: { id: string } }) => {
   const result = await getSingleProject({ params })
   const project = result
+
+  if (!project) {
+    notFound()
+  }
 
   return (
     <section id={project.id}>
@@ -54,5 +57,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
     </section>
   )
 }
+
+export const dynamicParams = true
 
 export default ProjectPage
