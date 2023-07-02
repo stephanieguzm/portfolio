@@ -1,6 +1,6 @@
 "use client"
 
-import { FormEvent, useRef, useState, ChangeEvent } from "react"
+import { FormEvent, useState, ChangeEvent } from "react"
 
 const Form = () => {
   const [ formData, setFormData ] = useState({
@@ -24,6 +24,14 @@ const Form = () => {
 
     //do something with the data
     console.log((formData))
+
+    fetch("/api/connect", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    })
 
     clearForm()
   }
