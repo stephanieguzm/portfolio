@@ -5,11 +5,15 @@ import { EMAIL_USER, transporter } from "@/lib/nodemailer";
 export async function POST(req: Request) {
   const body = await req.json();
 
-  const { name, email, message} : {
+  console.log(body)
+
+  const { name, email, message } : {
     name: string
     email: string
     message: string
   } = body
+
+  console.log("name", name, "email", email, "message", message)
 
   const mailOptions : nodemailer.SendMailOptions = {
     from: email,
@@ -23,10 +27,13 @@ export async function POST(req: Request) {
     await transporter
     .sendMail(mailOptions)
     .then((response: nodemailer.SentMessageInfo) => {
-      return NextResponse.json(
-        { error: false, emailSent: true, errors: [], response },
-        { status: 200 }
-      )
+      if(response.OK) {
+        return NextResponse.json(
+          { error: false, emailSent: true, errors: [], response },
+          { status: 200 }
+        )
+
+      }
     })
   } 
   catch (error: nodemailer.SentMessageInfo) {
