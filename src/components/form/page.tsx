@@ -15,25 +15,30 @@ const Form = () => {
     setFormData({...formData, [event.target.id]: value})
   }
 
-  function handleSubmit (event : FormEvent<HTMLFormElement>) {
+  async function handleSubmit (event : FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
     if (!formData.name || !formData.email || !formData.message) {
       return <h4 className={"form-message"}>Failed to send. Please fill out all form inputs to send your message.</h4>
     }
-
-    //do something with the data
+    
     console.log((formData))
 
-    fetch("/api/connect", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    })
+    try {
+      await fetch("/api/connect", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      })
+      clearForm()
+      console.log("email sent successfully")
 
-    clearForm()
+    } catch (error) {
+      console.log("failed to send email", error)
+    }
+
   }
 
   const clearForm = () => {

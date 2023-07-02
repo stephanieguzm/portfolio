@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer"
 import { EMAIL_USER, transporter } from "@/lib/nodemailer";
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: Request) {
   const body = await req.json();
 
   const { name, email, message} : {
@@ -14,7 +14,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   const mailOptions : nodemailer.SendMailOptions = {
     from: email,
     to: EMAIL_USER,
-    subject: `New Contact Form Submission from${name}`,
+    subject: `New Portfolio Contact Form Submission`,
     text: `${name} has sent you the following message : ${message}`,
     html: `<div>${message} <br /><br />Thank you,<br />${name}</div>`
   };
