@@ -21,8 +21,6 @@ const Form = () => {
     if (!formData.name || !formData.email || !formData.message) {
       return <h4 className={"form-message"}>Failed to send. Please fill out all form inputs to send your message.</h4>
     }
-    
-    console.log((formData))
 
     try {
       await fetch("/api/connect", {
