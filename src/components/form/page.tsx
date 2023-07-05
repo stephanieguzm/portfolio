@@ -1,6 +1,7 @@
 "use client"
 
 import { FormEvent, useState, ChangeEvent } from "react"
+import { emailRegex } from "@/lib/utils"
 
 const Form = () => {
   const [ formData, setFormData ] = useState({
@@ -90,6 +91,7 @@ const Form = () => {
             onChange={handleChange}
             minLength={3}
             maxLength={30}
+            pattern={emailRegex}
             required />
         </div>
         <div>
