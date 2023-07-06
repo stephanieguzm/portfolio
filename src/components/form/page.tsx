@@ -126,13 +126,21 @@ const Form = () => {
       </button>
       {status === formStatus.error && (
         <div className={"flex flex-wrap mb-6 text-red-700 font-medium py-2.5 leading-6"}>
-          <p className={"px-2 my-1 text-center"}><LuMailX /></p>
+          <p className={"px-2"}>
+            <LuMailX 
+              size={25}
+            />
+            </p>
           <p>There was an error sending your message. Please try again.</p>
         </div>
       )}
       {status === formStatus.submitted && (
         <div className={"flex flex-wrap mb-6 text-purple-700 font-medium py-2.5 leading-6"}>
-          <p className={"px-2 my-1 text-center"}><LuMailCheck /></p>
+          <p className={"px-2"}>
+            <LuMailCheck 
+              size={25}
+            />
+          </p>
           <p>Your message was sent successfully.</p> 
         </div>
       )}
