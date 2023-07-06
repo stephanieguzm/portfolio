@@ -1,6 +1,6 @@
 "use client"
 
-import { PROFILE_CONNECT_TITLE, PROFILE_CONNECT_SUBTITLE } from "@/lib/constants"
+import { PROFILE_CONNECT_TITLE, PROFILE_CONNECT_SUBTITLE } from "@lib/constants"
 import Form from "../form/page"
 
 export const Connect = () => {
