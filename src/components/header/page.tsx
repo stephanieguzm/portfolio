@@ -20,7 +20,7 @@ const Header = () => {
 const pathname = usePathname()
 
   return (
-    <header id={"header"} className={"mx-auto flex h-32 w-full items-center justify-center bg-white px-4 text-center text-gray-900 md:px-8"}>
+    <header id={"header"} className={"sticky top-0 z-50 mx-auto flex h-[12vh] w-full items-center justify-center bg-white px-4 text-center text-gray-900 md:px-8"}>
       <div className={"flex w-full max-w-3xl flex-col items-center justify-center space-y-4 md:max-w-7xl md:flex-row md:justify-between md:space-y-0"}>
         <div><p className={"mb-2 font-medium leading-6 text-gray-900"}>{SITE_NAME}</p></div>
         <div className={"flex flex-row space-x-4"}>
