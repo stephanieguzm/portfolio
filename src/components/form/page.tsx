@@ -1,4 +1,5 @@
 "use client"
+import { LuMailCheck, LuMailX } from 'react-icons/lu'
 
 import { FormEvent, useState, ChangeEvent } from "react"
 import { emailRegex } from "@/lib/utils"
@@ -113,24 +114,26 @@ const Form = () => {
       </div>
       <button
         type={"submit"}
-        className={"text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-4"}
+        className={"text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 my-4 disabled:opacity-50"}
         disabled={status === formStatus.loading} >
         {status === formStatus.loading ? (
           <>
-            <i className={"fa-solid fa-spinner fa-spin"}></i>Sending...
+            <i className={"text-grey"}></i>Sending...
           </>
         ) : (
           <>Send Message</>
           )}
       </button>
       {status === formStatus.error && (
-        <div className={"text-red-700 font-medium py-2.5 leading-6"}>
-          There was an error sending your message. Please try again.
+        <div className={"flex flex-wrap mb-6 text-red-700 font-medium py-2.5 leading-6"}>
+          <p className={"px-2 my-1 text-center"}><LuMailX /></p>
+          <p>There was an error sending your message. Please try again.</p>
         </div>
       )}
       {status === formStatus.submitted && (
-        <div className={"text-purple-700 font-medium py-2.5 leading-6"}>
-          Your message was sent successfully.
+        <div className={"flex flex-wrap mb-6 text-purple-700 font-medium py-2.5 leading-6"}>
+          <p className={"px-2 my-1 text-center"}><LuMailCheck /></p>
+          <p>Your message was sent successfully.</p> 
         </div>
       )}
     </form>
