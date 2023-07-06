@@ -5,9 +5,9 @@ import Form from "../form/page"
 
 export const Connect = () => {
   return (
-    <section id={"connect"}>
-      <h2>{PROFILE_CONNECT_TITLE}</h2>
-      <h3>{PROFILE_CONNECT_SUBTITLE}</h3>
+    <section id={"connect"} className={"m-4"}>
+      <h2 className={"text-3xl font-semibold leading-7 text-gray-900 py-1"}>{PROFILE_CONNECT_TITLE}</h2>
+      <p className={"mt-1 text-md leading-6 text-gray-600 py-4"}>{PROFILE_CONNECT_SUBTITLE}</p>
       <div>
         <Form />
       </div>
