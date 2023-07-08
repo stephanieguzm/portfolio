@@ -28,7 +28,7 @@ export const PROFILE_SKILLS_LABELS : string[] = [
 ]
 
 export const PROFILE_PROJECTS_TITLE : string = `Projects I’ve developed`
-export const PROFILE_PROJECTS_SUBTITLE : string = `Harnessing technology to cultivate learning, growth, and connection`
+export const PROFILE_PROJECTS_SUBTITLE : string = `Cultivating learning, growth, and connection through technology`
 
 export const PROFILE_CONNECT_TITLE : string = `Let's build something together`
 export const PROFILE_CONNECT_SUBTITLE : string = `Reach out if you're looking for a developer, have a question, or want to connect.`
