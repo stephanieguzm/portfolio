@@ -6,9 +6,9 @@ export const Projects = async () => {
   const projectsData = await getAllProjects()
 
   return (
-    <section id={"projects"} >
-      <h2>{PROFILE_PROJECTS_TITLE}</h2>
-      <h3>{PROFILE_PROJECTS_SUBTITLE}</h3>
+    <section id={"projects"} className={"md:px-8 m-4"} >
+      <h2 className={"text-3xl font-semibold leading-7 text-gray-900 py-1"}>{PROFILE_PROJECTS_TITLE}</h2>
+      <h3 className={"mt-1 text-md leading-6 text-gray-600 py-4"}>{PROFILE_PROJECTS_SUBTITLE}</h3>
       <div>
         {projectsData.map( (project, index) => {
           return <ProjectCard 
@@ -17,6 +17,7 @@ export const Projects = async () => {
             headline={project.headline}
             techStackLabels={project.techStackLabels}
             image={project.images[0]}
+            number={index + 1}
             key={index}
           />
         })}

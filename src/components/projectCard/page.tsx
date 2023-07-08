@@ -4,12 +4,13 @@ import Link from "next/link"
 interface ProjectCardProps {
   id: string
   name: string
+  number: number
   headline: string
   techStackLabels: string[]
   image: string
 }
 
-export const ProjectCard = ({ id, name, headline, techStackLabels, image } : ProjectCardProps) => {
+export const ProjectCard = ({ id, name, number, headline, techStackLabels, image } : ProjectCardProps) => {
   return (
     <div className={id}>
       <div>
@@ -27,6 +28,7 @@ export const ProjectCard = ({ id, name, headline, techStackLabels, image } : Pro
         </div>
       <h2>{name}</h2>
       <h3>{headline}</h3>
+      <h3>{number}</h3>
       <div>
         {techStackLabels.map((tech, index) => {
           return <p key={index}>{tech}</p>
