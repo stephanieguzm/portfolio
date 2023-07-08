@@ -39,7 +39,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
   }
 
   return (
-    <section id={project.id}>
+    <section id={project.id} className={"h-[76vh] bg-white"}>
       <h2>{project.name}</h2>
       <h3>{project.headline}</h3>
       <div>
