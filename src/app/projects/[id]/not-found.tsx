@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <div>
       <h2>Not Found</h2>
-      <p>Sorry, that project doesn't exist.</p>
+      <p>Sorry, that project doesn&apos;t exist.</p>
       <p>
         View <Link href="/#projects">All Projects</Link>
       </p>
