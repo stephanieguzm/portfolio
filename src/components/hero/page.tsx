@@ -6,11 +6,10 @@ import { TypeAnimation } from "react-type-animation";
 
 export const Hero = () => {
 
-  let reducedMotion : MediaQueryList
-  const [ reduced, setReduced ] = useState(true)
+  const [ reduced, setReduced ] = useState(false)
 
   useEffect(() => {
-   reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+   const reducedMotion : MediaQueryList = window.matchMedia("(prefers-reduced-motion: reduce)")
    setReduced(reducedMotion.matches)
   }, [])
 
@@ -19,7 +18,7 @@ export const Hero = () => {
   return (
     <section id={"hero"} className={"mx-auto flex h-[88vh] w-full items-center justify-center bg-fuchsia-200 px-4 text-center text-gray-900 md:px-8"}>
       <div>
-        <h1 className={"text-4xl"}>Hi there, I'm 
+        <h1 className={"text-4xl"}>Hi there, I&apos;m 
           <span className={"text-fuchsia-950"}> {SITE_NAME}</span>
         </h1>
         {reduced && <h2 className="text-3xl">{HERO_SUBTITLE}</h2>}
