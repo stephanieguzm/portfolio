@@ -15,13 +15,13 @@ const Footer = () => {
           <a href={PROFILE_GITHUB} target='_blank' rel='noreferrer'>
             <LuGithub
               size={25}
-              className={"transition-transform cursor-pointer hover:-translate-y-1"}
+              className={"transition-transform duration-500 ease-in-out md:hover:-translate-y-1"}
             />
           </a>
           <a href={PROFILE_LINKEDIN} target='_blank' rel='noreferrer'>
             <LuLinkedin 
               size={25}
-              className={"transition-transform cursor-pointer hover:-translate-y-1"}
+              className={"transition-transform duration-500 ease-in-out md:hover:-translate-y-1"}
               />
           </a>
         </div>
