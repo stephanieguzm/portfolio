@@ -10,7 +10,6 @@ interface NavLink {
 
 const navLinks : NavLink[] = [
   { path: "about", name: "About" },
-  { path: "#skills", name: "Skills" },
   { path: "projects", name: "Projects" },
   { path: "connect", name: "Connect"}
 ]
