@@ -13,22 +13,21 @@ interface ProjectCardProps {
 export const ProjectCard = ({ id, name, number, headline, techStackLabels, image } : ProjectCardProps) => {
   return (
     <div className={id}>
-      <div>
-        <Image
-          src={image}
-          alt={`${name} project homepage`}
-          width={500}
-          height={500}
-          // style={{
-          //   width: 100%,
-          //   height: auto,
-          // }}
-          priority
-        />
+      <div className={"w-1/3 flex flex-col justify-center"}>
+        <h2 className={"text-2xl font-medium"}>{name}</h2>
+        <div className={"w-full"}>
+          <Image
+            src={image}
+            alt={`${name} project homepage`}
+            className={""}
+            width={1000}
+            height={1000}
+            priority
+          />
         </div>
-      <h2>{name}</h2>
-      <h3>{headline}</h3>
-      <h3>{number}</h3>
+        </div>
+        <h3>{headline}</h3>
+        <h3>{number}</h3>
       <div>
         {techStackLabels.map((tech, index) => {
           return <p key={index}>{tech}</p>
