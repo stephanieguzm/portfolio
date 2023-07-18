@@ -1,8 +1,8 @@
-import { ProjectCard } from "../projectCard/page"
+import { ProjectCard } from "../../components/projectCard/page"
 import { PROFILE_PROJECTS_TITLE, PROFILE_PROJECTS_SUBTITLE } from "@lib/constants"
 import { getAllProjects } from "@lib/projectdata"
 
-export const Projects = async () => {
+const Projects = async () => {
   const projectsData = await getAllProjects()
 
   return (
@@ -25,3 +25,5 @@ export const Projects = async () => {
     </section>
   )
 }
+
+export default Projects

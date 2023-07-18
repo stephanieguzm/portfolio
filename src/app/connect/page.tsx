@@ -1,9 +1,9 @@
 "use client"
 
 import { PROFILE_CONNECT_TITLE, PROFILE_CONNECT_SUBTITLE } from "@lib/constants"
-import Form from "../form/page"
+import Form from "@components/form/page"
 
-export const Connect = () => {
+const Connect = () => {
   return (
     <section id={"connect"} className={"md:px-8 m-4"}>
       <h2 className={"text-3xl font-semibold leading-7 text-gray-900 py-1"}>{PROFILE_CONNECT_TITLE}</h2>
@@ -14,3 +14,5 @@ export const Connect = () => {
     </section>
   )
 }
+
+export default Connect
