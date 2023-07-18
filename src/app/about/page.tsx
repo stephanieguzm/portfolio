@@ -1,4 +1,5 @@
 import { PROFILE_ABOUT_TITLE, PROFILE_ABOUT_TEXT } from "@lib/constants"
+import { Skills } from "@components/skills/page"
 
 const About = () => {
   return (
@@ -8,6 +9,7 @@ const About = () => {
         {PROFILE_ABOUT_TEXT.map((para, index) => {
           return <p key={index} className={"mt-1 text-md leading-6 text-gray-600 py-2"}>{para}</p>
         })}
+        <Skills />
       </div>
     </section>
   )
