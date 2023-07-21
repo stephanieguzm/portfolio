@@ -13,7 +13,7 @@ export const Hero = () => {
    setReduced(reducedMotion.matches)
   }, [])
 
-  const labels : (string | number)[] = HERO_SUBTITLE_LABELS.map(label => [label, 1000]).flat()
+  const labels : (string | number)[] = HERO_SUBTITLE_LABELS.map(label => [label, 2000]).flat()
 
   return (
     <section id={"hero"} className={"mx-auto flex h-[88vh] w-full items-center justify-center bg-fuchsia-200 px-4 text-center text-gray-900 md:px-8"}>
