@@ -11,12 +11,13 @@ export const Skills = () => {
         {labels.map((label, index) => {
           const Icon : IconType = icons[label.icon]
           return (
-          <div className={"flex flex-col flex-wrap items-center justify-start"}>
-            <p key={index} className={"text-gray-900 font-medium rounded-full text-sm px-5 py-2.5 text-center mx-2 mb-2 my-4"}>{label.skill}</p>
-            <Icon 
-              size={50}
-            />
-          </div>
+            <div key={index} id={label.skill} className={"flex flex-col flex-wrap items-center justify-start"}>
+              <p className={"text-gray-900 font-medium rounded-full text-sm px-5 py-2.5 text-center mx-2 mb-2 my-4"}>{label.skill}</p>
+              <Icon 
+                size={50}
+                title={`${label.skill} icon`}
+              />
+            </div>
           )
         })}
       </div>
