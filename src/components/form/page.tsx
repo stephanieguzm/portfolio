@@ -1,6 +1,6 @@
 "use client"
-import { LuMailCheck, LuMailX } from 'react-icons/lu'
 
+import Image from 'next/image'
 import { FormEvent, useState, ChangeEvent } from "react"
 import { emailRegex } from "@/lib/utils"
 
@@ -118,7 +118,7 @@ const Form = () => {
         disabled={status === formStatus.loading} >
         {status === formStatus.loading ? (
           <>
-            <i className={"text-grey"}></i>Sending...
+            <i>Sending...</i>
           </>
         ) : (
           <>Send Message</>
@@ -127,8 +127,12 @@ const Form = () => {
       {status === formStatus.error && (
         <div className={"flex flex-wrap mb-6 text-red-700 font-medium py-2.5 leading-6"}>
           <p className={"px-2"}>
-            <LuMailX 
-              size={25}
+            <Image 
+              src={"/images/site/mail-x.svg"}
+              alt={"message undeliverable warning"}
+              width={24}
+              height={24}
+              className={"scale-125 transition delay-300 duration-1000"}
             />
             </p>
           <p>There was an error sending your message. Please try again.</p>
@@ -137,8 +141,12 @@ const Form = () => {
       {status === formStatus.submitted && (
         <div className={"flex flex-wrap mb-6 text-purple-700 font-medium py-2.5 leading-6"}>
           <p className={"px-2"}>
-            <LuMailCheck 
-              size={25}
+            <Image 
+              src={"/images/site/mail-check.svg"}
+              alt={"message delivered successfully"}
+              width={24}
+              height={24}
+              className={"scale-125 transition delay-300 duration-1000"}
             />
           </p>
           <p>Your message was sent successfully.</p> 
