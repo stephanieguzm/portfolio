@@ -22,7 +22,7 @@ const About = () => {
           })}
         </div>
       </div>
-      {/* <Skills /> */}
+      <Skills />
     </section>
   )
 }
