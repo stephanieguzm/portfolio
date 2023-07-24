@@ -1,5 +1,5 @@
 import { PROFILE_SKILLS_TITLE, PROFILE_SKILLS_LABELS } from "@lib/constants"
-import Image from "next/image"
+import { Label } from "../label/page"
 
 const labels = PROFILE_SKILLS_LABELS
 
@@ -11,14 +11,10 @@ export const Skills = () => {
         {labels.map((label, index) => {
           return (
             <div key={index} id={label.skill} className={"flex flex-col flex-wrap items-center justify-start"}>
-              <p className={"text-gray-900 font-medium rounded-full text-sm px-5 py-2.5 text-center mx-2 mb-2 my-4"}>{label.skill}</p>
-              <Image 
-              src={label.src}
-              alt={`${label.skill} icon`}
-              width={48}
-              height={48}
-              className={"hover:scale-125 transition duration-500"}
-            />
+              <Label 
+                skill={label.skill}
+                src={label.src}
+              />
             </div>
           )
         })}
