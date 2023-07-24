@@ -1,8 +1,11 @@
 import Image from "next/image"
-import { PROFILE_ABOUT_TITLE, PROFILE_ABOUT_TEXT, ABOUT_IMG_ALT as altText } from "@lib/constants"
+import { PROFILE_ABOUT_TITLE, PROFILE_ABOUT_TEXT, ABOUT_IMG_ALT as altText, PROFILE_SKILLS_LABELS } from "@lib/constants"
 import { Skills } from "@components/skills/page"
 
 const About = () => {
+
+  const labels = PROFILE_SKILLS_LABELS
+
   return (
     <section id={"about"} className={"flex flex-col items-start justify-center text-gray-900 md:px-8 m-8"}>
       <h1 className={"text-4xl font-bold pb-8"}>About Me</h1>
