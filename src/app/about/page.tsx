@@ -5,7 +5,7 @@ import { Skills } from "@components/skills/page"
 const About = () => {
   return (
     <section id={"about"} className={"flex flex-col items-center justify-center text-gray-900 md:px-8 m-8"}>
-      <h1 className={"text-4xl w-full font-bold pb-6 text-left"}>About Me</h1>
+      <h1 className={"text-4xl w-full max-w-2xl font-bold pb-6 text-left md:max-w-7xl"}>About Me</h1>
       <div className={"flex flex-col w-full max-w-2xl items-center justify-center space-y-4 md:max-w-7xl md:justify-between lg:flex-row"}>
         <Image 
           src={"/images/site/stephanie-headshot.png"}
