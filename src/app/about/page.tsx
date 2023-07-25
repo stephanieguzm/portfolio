@@ -1,21 +1,18 @@
 import Image from "next/image"
-import { PROFILE_ABOUT_TITLE, PROFILE_ABOUT_TEXT, ABOUT_IMG_ALT as altText, PROFILE_SKILLS_LABELS } from "@lib/constants"
+import { PROFILE_ABOUT_TITLE, PROFILE_ABOUT_TEXT, ABOUT_IMG_ALT as altText } from "@lib/constants"
 import { Skills } from "@components/skills/page"
 
 const About = () => {
-
-  const labels = PROFILE_SKILLS_LABELS
-
   return (
-    <section id={"about"} className={"flex flex-col items-start justify-center text-gray-900 md:px-8 m-8"}>
-      <h1 className={"text-4xl font-bold pb-8"}>About Me</h1>
+    <section id={"about"} className={"flex flex-col items-center justify-center text-gray-900 md:px-8 m-8"}>
+      <h1 className={"text-4xl w-full font-bold pb-6 text-left"}>About Me</h1>
       <div className={"flex flex-col w-full max-w-2xl items-center justify-center space-y-4 md:max-w-7xl md:justify-between lg:flex-row"}>
         <Image 
           src={"/images/site/stephanie-headshot.png"}
           alt={`${altText}`}
           width={500}
           height={500}
-          className={"rounded-full p-8"}
+          className={"rounded-full sm:p-8"}
           priority
           />
         <div className={"flex flex-col items-start justify-start"}>
