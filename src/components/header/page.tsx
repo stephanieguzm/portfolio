@@ -20,7 +20,7 @@ const Header = () => {
   const pathname = usePathname()
   const [ isNavOpen, setIsNavOpen ] = useState(false)
   
-  const activeStyle = `text-purple-700 border-b-2 border-purple-700 my-8`
+  const activeStyle = `text-purple-700 border-b-2 border-purple-700`
   const hideMenuNav = `hidden`
   const showMenuNav = `block absolute w-[100%] h-[100vh] top-0 left-0 bg-white z-10 flex flex-col justify-evenly items-center`
 
@@ -31,7 +31,7 @@ const Header = () => {
         <nav>
           <section className={"mobile-menu flex lg:hidden"}>
             <div 
-              className={"hamburger-icon align-center space-y-2"} 
+              className={"hamburger-icon align-center space-y-2 cursor-pointer"} 
               onClick={() => setIsNavOpen(prev => !prev)}>
               <span className="block h-0.5 w-8 bg-gray-600"></span>
               <span className="block h-0.5 w-8 bg-gray-600"></span>
@@ -41,7 +41,7 @@ const Header = () => {
                 className={"absolute top-0 right-0 px-8 py-8"}
                 onClick={() => setIsNavOpen(false)}>
                 <svg
-                  className={"h-8 w-8 text-gray-600"}
+                  className={"h-8 w-8 text-gray-600 cursor-pointer"}
                   viewBox={"0 0 24 24"}
                   fill={"none"}
                   stroke={"currentColor"}
@@ -60,7 +60,7 @@ const Header = () => {
                       id={link.path}
                       href={`/${link.path}`}
                       onClick={() => setIsNavOpen(false)}
-                      className={`border-b border-gray-400 my-8`}>
+                      className={`hover:border-b-2 my-8 text-gray-900 font-medium hover:text-purple-700 hover:border-b-purple-700`}>
                       {link.name}
                     </Link>
                   </li>
@@ -77,7 +77,7 @@ const Header = () => {
                   <Link 
                     id={link.path}
                     href={`/${link.path}`}
-                    className={`px-3 py-2 text-gray-900 font-medium hover:text-purple-700 transition-transform duration-500 ease-in-out md:hover:-translate-y-1 ${isActive && activeStyle}`}
+                    className={`my-8 text-gray-900 font-medium hover:text-purple-700 transition-transform duration-500 ease-in-out md:hover:-translate-y-1 ${isActive && activeStyle}`}
                     scroll={false}
                     passHref>
                       {link.name}
