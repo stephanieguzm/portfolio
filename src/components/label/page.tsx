@@ -14,7 +14,7 @@ export const Label = ( { skill, src } : LabelProps) => {
         alt={`${skill} icon`}
         width={48}
         height={48}
-        className={"hover:scale-125 transition duration-500 pb-2.5"}
+        className={"pb-2.5"}
       />
     </>
   )
