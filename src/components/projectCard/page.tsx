@@ -13,7 +13,7 @@ interface ProjectCardProps {
 export const ProjectCard = ({ id, name, number, headline, techStackLabels, image } : ProjectCardProps) => {
   return (
     <div className={id}>
-      <div className={"w-1/3 flex flex-col justify-center"}>
+      <div className={"w-3/4 flex flex-col justify-center"}>
         <h2 className={"text-2xl font-medium"}>{name}</h2>
         <div className={"w-full"}>
           <Image
