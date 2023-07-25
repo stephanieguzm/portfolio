@@ -25,8 +25,8 @@ const Header = () => {
   const showMenuNav = `block absolute w-[100%] h-[100vh] top-0 left-0 bg-white z-10 flex flex-col justify-evenly items-center`
 
   return (
-    <header id={"header"} className={"sticky top-0 z-50 mx-auto flex h-[8vh] w-full items-center justify-between bg-white px-4 text-center text-gray-900 border-b border-gray-100 md:px-8"}>
-      <div className={"flex w-full max-w-3xl flex-row items-center justify-between space-y-4 md:max-w-7xl md:flex-row md:justify-between md:space-y-0"}>
+    <header id={"header"} className={"sticky top-0 z-50 mx-auto flex h-[8vh] w-full items-center justify-center bg-white px-4 text-center text-gray-900 border-b border-gray-100 md:px-8"}>
+      <div className={"flex w-full max-w-3xl flex-row items-center justify-between md:max-w-7xl md:flex-row md:space-y-0"}>
         <div><Link href={`/`}className={"mb-2 font-medium leading-6 text-gray-900"}>{SITE_NAME}</Link></div>
         <nav>
           <section className={"mobile-menu flex lg:hidden"}>
