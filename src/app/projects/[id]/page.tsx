@@ -4,17 +4,22 @@ import { notFound } from "next/navigation";
 export interface ProjectPageProps {
   id: string
 }
-export interface repoUrl {
+export interface RepoUrl {
   text: string
   link: string
+}
+
+export interface TechStackLabel {
+  skill: string
+  src: string
 }
 export interface ProjectInterface {
   id: string
   name: string
   headline: string
   images: string[]
-  techStackLabels: string[]
-  repoURL: repoUrl[]
+  techStackLabels: TechStackLabel[]
+  repoURL: RepoUrl[]
   liveURL: string
   purpose?: string
   techStackExp?: string
