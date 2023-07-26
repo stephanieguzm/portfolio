@@ -66,7 +66,6 @@ export const PROFILE_SKILLS_LABELS : SkillsLabel[] = [
   },
 ]
 
-export const PROFILE_PROJECTS_TITLE : string = `Projects I’ve developed`
 export const PROFILE_PROJECTS_SUBTITLE : string = `Cultivating learning, growth, and connection through technology`
 
 export const PROFILE_CONNECT_TITLE : string = `Let's build something together`
