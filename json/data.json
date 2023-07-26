@@ -8,7 +8,28 @@
       "/images/projects/seekr-results-desktop.png", 
       "/images/projects/seekr-single-result-desktop.png" 
     ],
-    "techStackLabels": ["React", "React Router", "CSS", "GraphQL", "Apollo Client"],
+    "techStackLabels": [
+      { 
+        "skill": "React",
+        "src": "/images/site/react.svg"
+      },
+      {
+        "skill": "React Router",
+        "src": "/images/site/reactrouter.svg"
+      },
+      {
+        "skill": "JavaScript",
+        "src": "/images/site/javascript.svg"
+      },
+      {
+        "skill": "GraphQL",
+        "src": "/images/site/graphql.svg"
+      },
+      {
+        "skill": "Apollo Client",
+        "src": "/images/site/apollographql.svg"
+      }
+    ],
     "repoURL": [
       {
         "text": "Source Code",
@@ -32,7 +53,40 @@
       "/images/projects/tecuento-comment-desktop.png", 
       "/images/projects/tecuento-single-tea-mobile.png"
     ],
-    "techStackLabels": ["React", "React Router", "Cypress", "Node", "Express", "PostgreSQL", "Knex", "CSS"],
+    "techStackLabels": [
+      { 
+        "skill": "React",
+        "src": "/images/site/react.svg"
+      },
+      {
+        "skill": "React Router",
+        "src": "/images/site/reactrouter.svg"
+      },
+      {
+        "skill": "JavaScript",
+        "src": "/images/site/javascript.svg"
+      },
+      {
+        "skill": "Cypress",
+        "src": "/images/site/cypress.svg"
+      },
+      {
+        "skill": "Node.js",
+        "src": "/images/site/nodedotjs.svg"
+      },
+      {
+        "skill": "Express",
+        "src": "/images/site/express.svg"
+      },
+      {
+        "skill": "PostgreSQL",
+        "src": "/images/site/postgresql.svg"
+      },
+      {
+        "skill": "Knex",
+        "src": "/images/site/knex.svg"
+      }
+    ],
     "repoURL": [
       {
         "text": "Front End Code",
@@ -58,7 +112,36 @@
       "/images/projects/bookmarked-add-desktop.png", 
       "/images/projects/bookmarked-home-mobile.png"
     ],
-    "techStackLabels": ["React", "React Router", "GraphQL", "Apollo Client", "Cypress", "CircleCI", "CSS"],
+    "techStackLabels": [
+      { 
+        "skill": "React",
+        "src": "/images/site/react.svg"
+      },
+      {
+        "skill": "React Router",
+        "src": "/images/site/reactrouter.svg"
+      },
+      {
+        "skill": "JavaScript",
+        "src": "/images/site/javascript.svg"
+      },
+      {
+        "skill": "GraphQL",
+        "src": "/images/site/graphql.svg"
+      },
+      {
+        "skill": "Apollo Client",
+        "src": "/images/site/apollographql.svg"
+      },
+      {
+        "skill": "Cypress",
+        "src": "/images/site/cypress.svg"
+      },
+      {
+        "skill": "CircleCI",
+        "src": "/images/site/circleci.svg"
+      }
+    ],
     "repoURL": [
       {
         "text": "Source Code",
