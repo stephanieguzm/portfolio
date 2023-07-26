@@ -9,7 +9,7 @@ const Projects = async () => {
     <section id={"projects"} className={"flex flex-col items-center justify-center text-gray-900 md:px-8 m-8"} >
       <h2 className={"text-4xl w-full max-w-2xl font-bold pb-4 text-left md:max-w-7xl"}>Projects</h2>
       <h3 className={"mt-1 text-md leading-6 text-gray-600 py-2 md:py-4 w-full max-w-2xl text-left md:max-w-7xl"}>{PROFILE_PROJECTS_SUBTITLE}</h3>
-      <div className={"flex flex-col w-full max-w-2xl items-center justify-center space-y-4 md:max-w-7xl md:justify-between lg:flex-row"}>
+      <div className={"flex flex-col w-full max-w-2xl items-start justify-start md:max-w-7xl md:justify-between lg:flex-row"}>
         {projectsData.map( (project, index) => {
           return <ProjectCard 
             id={project.id}
